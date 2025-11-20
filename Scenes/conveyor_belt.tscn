@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://i2s3wsicfdhd"]
+
+[ext_resource type="Script" uid="uid://cv5hy62ke20m" path="res://Scenes/conveyor_belt.gd" id="1_btlfg"]
+[ext_resource type="Texture2D" uid="uid://2b8uufcma12r" path="res://Assets/Sprites/Environment/Conveyor Belts/Test Conveyor Belt.png" id="2_gd2v7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64658"]
+size = Vector2(32, 32)
+
+[node name="ConveyorBelt" type="Area2D"]
+script = ExtResource("1_btlfg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(16, 16)
+texture = ExtResource("2_gd2v7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_64658")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

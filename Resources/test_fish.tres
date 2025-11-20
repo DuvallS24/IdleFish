@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://8iwpnxdmg4h6"]
+
+[ext_resource type="Script" uid="uid://bo6geuijie088" path="res://Resources/fish_data.gd" id="1_yaho8"]
+[ext_resource type="Texture2D" uid="uid://cc7klglmfl1j" path="res://Assets/Sprites/Fish/Test Fish.png" id="2_m8dhf"]
+
+[resource]
+script = ExtResource("1_yaho8")
+name = "Test Fish"
+tags = Array[String](["Fish", "Raw", "Fresh"])
+sprite = ExtResource("2_m8dhf")
+base_value = 1
+base_mult = 1
+value_additive = 0
+mult_additive = 0
+value_mult = 1
+mult_mult = 1

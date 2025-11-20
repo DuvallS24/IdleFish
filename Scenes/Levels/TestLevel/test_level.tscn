@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckyc0gj11dnkm"]
+
+[ext_resource type="PackedScene" uid="uid://i2s3wsicfdhd" path="res://Scenes/conveyor_belt.tscn" id="3_nnqhd"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="ConveyorBelt" parent="." instance=ExtResource("3_nnqhd")]
+position = Vector2(296, 159)

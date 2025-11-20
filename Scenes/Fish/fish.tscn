@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmiey2hx3fuxu"]
+
+[ext_resource type="Script" uid="uid://d01vaosqr6ofy" path="res://Scenes/Fish/fish.gd" id="1_3knl5"]
+[ext_resource type="Texture2D" uid="uid://cc7klglmfl1j" path="res://Assets/Sprites/Fish/Test Fish.png" id="1_40dbu"]
+[ext_resource type="Resource" uid="uid://8iwpnxdmg4h6" path="res://Resources/test_fish.tres" id="2_hlkdc"]
+[ext_resource type="Script" uid="uid://cr4sw86swrnkr" path="res://Components/follow_mouse.gd" id="4_b250f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atfql"]
+radius = 0.01
+
+[node name="Fish" type="Area2D"]
+script = ExtResource("1_3knl5")
+fish_data = ExtResource("2_hlkdc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_atfql")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 1)
+texture = ExtResource("1_40dbu")
+
+[node name="FollowMouse" type="Node" parent="." node_paths=PackedStringArray("target")]
+script = ExtResource("4_b250f")
+target = NodePath("..")

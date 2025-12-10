@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dqoyqchowpxss"]
+
+[ext_resource type="Texture2D" uid="uid://dl2clk2fghce3" path="res://Assets/Sprites/Environment/Conveyor Belts/Conveyor Sprite Sheet.png" id="1_8pn1s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pn1s"]
+texture = ExtResource("1_8pn1s")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_8pn1s")

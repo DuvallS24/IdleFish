@@ -1,18 +1,24 @@
-class_name Belt extends RefCounted
+class_name Belt extends BeltComponent
 
 var direction: Globals.BELT_DIRECTION
 var items: Array[BeltItem]
 var distance_to_first_item: float
 var length: float = 32.0
 
+var components: Array[BeltComponent] = []
+
 
 func _init() -> void:
 	
-	self.direction = Globals.BELT_DIRECTION.EAST
+	self.direction = Globals.BELT_DIRECTION.FORWARD
 	self.distance_to_first_item = self.length
 	#var init_test_item: BeltItem = BeltItem.new()
 	#self.items.append(init_test_item)
 	#self.distance_to_first_item = 0.0
+	
+	self.components.append(BeltComponent.new())
+	self.components.append(ItemEjector.new())
+	self.components.append(ItemAcceptor.new())
 	
 	return
 	

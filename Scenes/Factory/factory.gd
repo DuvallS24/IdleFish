@@ -1,6 +1,8 @@
 class_name Factory extends Node2D
 
+
 @onready var factory_area: FactoryArea = $FactoryArea
+@onready var factory_buildings: TileMapLayer = $FactoryBuildings
 @onready var belt_system: BeltSystem = $BeltSystem
 
 
@@ -12,6 +14,13 @@ func _ready() -> void:
 	# -------- Debug setup! ------------
 	
 	# First create a new 'belt' at the desired grid coords
+	self.factory_buildings.set_cell(Vector2i(0, 5), 1, Vector2i(0, 0))
+	self.factory_buildings.set_cell(Vector2i(1, 5), 1, Vector2i(2, 0))
+	self.factory_buildings.set_cell(Vector2i(2, 5), 1, Vector2i(2, 0))
+	self.factory_buildings.set_cell(Vector2i(3, 5), 1, Vector2i(2, 0))
+	self.factory_buildings.set_cell(Vector2i(4, 5), 1, Vector2i(2, 0))
+	self.factory_buildings.set_cell(Vector2i(5, 5), 1, Vector2i(2, 0))
+	self.factory_buildings.set_cell(Vector2i(6, 5), 1, Vector2i(2, 0))
 	
 	# -------- End Debug setup! --------
 	
